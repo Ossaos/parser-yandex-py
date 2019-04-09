@@ -1,6 +1,8 @@
 import pandas as pd
 import pytest
-from . import *
+import controller
+from config import _INPUT_DIR_, _OUTPUT_DIR_
+import parse_har
 
 
 def test_open_har():
@@ -22,4 +24,4 @@ def test_save_to_excel_current():
 
 
 def test_controller():
-    controller.parse_input()
+    controller.parse_input(_INPUT_DIR_, _OUTPUT_DIR_)
